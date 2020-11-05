@@ -42,12 +42,12 @@ async function main(params) {
 
           appInsights.setup(params.iKey).start();
           var client = appInsights.defaultClient;
-          appInsights.defaultClient.addTelemetryProcessor(envelope => {
+          client.addTelemetryProcessor(envelope => {
             envelope.tags["ai.cloud.role"] = "microsoft-telemetry";
             envelope.tags["ai.cloud.roleInstance"] = "microsoft-telemetry"
           });
 
-          client.trackEvent({ name: "Microsoft.events.AdobeEvent", properties: { IOEventBody: JSON.stringify(params) } });
+          client.trackEvent({ name: "Microsoft.events.AdobeEvent", properties: { IOEventBody: JSON.stringify(event) } });
         }
         else {
           logger.error("x-adobe-signature header verification failure")
