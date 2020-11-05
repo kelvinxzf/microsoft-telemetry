@@ -1,4 +1,4 @@
-# TurkishCyanMollusk
+# Microsoft Telemetry (App Insights) Firefly App
 
 Welcome to my Adobe I/O Application!
 
