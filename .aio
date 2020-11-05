@@ -1,0 +1,38 @@
+{
+  "project": {
+    "id": "4566206088344575400",
+    "name": "TurkishCyanMollusk",
+    "title": "Microsoft Telemetry",
+    "org": {
+      "id": "49996",
+      "name": "Microsoft - MSCOM",
+      "ims_org_id": "EA76ADE95776D2EC7F000101@AdobeOrg"
+    },
+    "workspace": {
+      "id": "4566206088344576228",
+      "name": "Development",
+      "title": "Development",
+      "action_url": "https://49996-turkishcyanmollusk-development.adobeioruntime.net",
+      "app_url": "https://49996-turkishcyanmollusk-development.adobeio-static.net",
+      "details": {
+        "credentials": [
+          {
+            "id": "119611",
+            "name": "Project_1603488880419J",
+            "integration_type": "service"
+          }
+        ],
+        "services": [
+          {
+            "code": "AdobeIOManagementAPISDK",
+            "name": "I/O Management API"
+          },
+          {
+            "code": "CloudIntegrationSDK",
+            "name": "I/O Events"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+packages:
+  __APP_PACKAGE__:
+    license: Apache-2.0
+    actions:
+      generic:
+        function: actions/generic/index.js
+        web: 'yes'
+        runtime: 'nodejs:12'
+        inputs:
+          LOG_LEVEL: debug
+        annotations:
+          require-adobe-auth: true
+          final: true
+      publish-events:
+        function: actions/publish-events/index.js
+        web: 'yes'
+        runtime: 'nodejs:12'
+        inputs:
+          LOG_LEVEL: debug
+          apiKey: $SERVICE_API_KEY
+        annotations:
+          require-adobe-auth: true
+          final: true
+      app-insights:
+        function: actions/app-insights/index.js
+        web: 'yes'
+        runtime: 'nodejs:12'
+        inputs:
+          LOG_LEVEL: debug
+          iKey : $APP_INSIGHTS_KEY
+          clientSecret: $SERVICE_CLIENT_SECRET
+          orgId: $SERVICE_ORG_ID
+          apiKey: $SERVICE_API_KEY
+          authToken: $AIO_runtime_auth
+        annotations:
+          require-adobe-auth: false
+          final: true
