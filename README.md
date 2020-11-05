@@ -31,7 +31,7 @@ local serverless stack and also run your actions locally use the `aio app run --
 This file must not be committed to source control!
 
 - First generate `.aio` and `.env` files, please go to your I/O workspace and download your config.json (from the `Donwload all` button), then run `aio app use yourConfig.json`
-- Verify SERVICE_API_KEY is generated in `.env` file
+- Verify `AIO_runtime_auth` and `SERVICE_API_KEY` are generated in `.env` file
 - Append following to your `.env` and update values accordingly
 
 ```bash
